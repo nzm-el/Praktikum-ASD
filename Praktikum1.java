@@ -24,7 +24,7 @@ public class Praktikum1 {
             System.out.println("==============================");
             System.out.println("==============================");
         } else {
-            double nilaiAkhir = (0.2 * tugas) + (0.2 * kuis) + (0.3 * uts) + (0.4 * uas);
+            double nilaiAkhir = (0.2 * tugas) + (0.2 * kuis) + (0.3 * uts) + (0.3 * uas);
 
             String huruf;
             if (nilaiAkhir > 80 && nilaiAkhir <= 100) {
