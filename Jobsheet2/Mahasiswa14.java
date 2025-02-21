@@ -21,7 +21,7 @@ public class Mahasiswa14 {
         } else { 
             System.out.println("IPK tidak valid. Harus antara 0.0 dan 4.0");
         }
-    }       
+    }
 
     String nilaiKerja() {
         if (ipk >= 3.5) {
@@ -33,5 +33,16 @@ public class Mahasiswa14 {
         } else {
             return "Kinerja kurang";
         }
+    }
+
+    public Mahasiswa14() {
+
+    }
+
+    public Mahasiswa14(String nm, String nim, double ipk, String kls) {
+        nama = nm;
+        this.nim = nim;
+        this.ipk = ipk; 
+        kelas = kls;
     }
 }
