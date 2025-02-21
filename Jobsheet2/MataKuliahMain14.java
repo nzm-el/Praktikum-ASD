@@ -12,7 +12,7 @@ public class MataKuliahMain14 {
         mk1.kurangiJam(2);
         mk1.tampilInformasi();
 
-        MataKuliah14 mk2 = new MataKuliah14("345", "", 3, 3);
+        MataKuliah14 mk2 = new MataKuliah14("345", "Ahmad", 3, 3);
         mk2.tampilInformasi();
     }
 }
