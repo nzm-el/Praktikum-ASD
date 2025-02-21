@@ -15,5 +15,7 @@ public class MahasiswaMain14 {
         mhs2.updateIPK(3.30);   
         mhs2.tampilkanInformasi();
 
+        Mahasiswa14 mhszam = new Mahasiswa14("Nizam El Mulky Assalam", "244107020041", 3.67, "TI 1B");
+        mhszam.tampilkanInformasi();
     }
 }
