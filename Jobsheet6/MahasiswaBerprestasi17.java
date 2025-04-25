@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class MahasiswaBerprestasi17 {
     Mahasiswa17[] listMhs;
     int jumlah;
@@ -31,14 +30,12 @@ public class MahasiswaBerprestasi17 {
             listMhs[i] = new Mahasiswa17(nim, nama, kelas, ipk);
         }
     }
-
     void tampil() {
         for (int i = 0; i < jumlah; i++) {
             listMhs[i].tampilInformasi();
             System.out.println("---------------------------------");
         }
     }
-
     void bubblesort() {
         for (int i = 0; i < jumlah - 1; i++) {
             for (int j = 1; j < jumlah - i; j++) {
@@ -61,6 +58,17 @@ public class MahasiswaBerprestasi17 {
             Mahasiswa17 tmp = listMhs[idxMin];
             listMhs[idxMin] = listMhs[i];
             listMhs[i] = tmp;
+        }
+    }
+    void insertionSort() {
+        for (int i = 1; i < listMhs.length; i++) {
+            Mahasiswa17 temp = listMhs[i];
+            int j = i;
+            while (j > 0 && listMhs[j - 1].ipk > temp.ipk) {
+                listMhs[j] = listMhs[j - 1];
+                j--;
+            }
+            listMhs[j] = temp;
         }
     }
 }
