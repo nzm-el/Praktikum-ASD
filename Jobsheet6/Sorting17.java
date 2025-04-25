@@ -38,7 +38,7 @@ public class Sorting17 {
             int temp = data[i];
             data[i] = data[min];
             data[min] = temp;
-        }
+        } 
     } 
     void InsertionSort() {
         for(int i = 1; i <= data.length - 1; i++) {

@@ -25,5 +25,5 @@ public class SortingMain17 {
         dataurut3.InsertionSort();
         System.out.println("Data sudah diurutkan dengan INSERTION SORT (ASC)");
         dataurut3.tampil();
-    }
+    } 
 }
