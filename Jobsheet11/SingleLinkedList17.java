@@ -100,8 +100,9 @@ public class SingleLinkedList17 {
     public void removeFirst() {
         if (isEmpty()) {
             System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
-        } else if (head.next == null) {
-            head = tail = null;
+        } else if (head.next == tail) {
+            head = null;
+            tail = null;
         } else {
             head = head.next;
         }
@@ -119,28 +120,6 @@ public class SingleLinkedList17 {
             }
             temp.next = null;
             tail = temp;
-        }
-    }
-
-    public void remove(String key) {
-        if (isEmpty()) {
-            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
-        } else {
-            NodeMahasiswa17 temp = head;
-            while (temp != null) {
-                if (temp.data.nama.equalsIgnoreCase(key) && temp == head) {
-                    this.removeFirst();
-                    break;
-                } else if (temp.next != null && temp.next.data.nama.equalsIgnoreCase(key)) {
-                    temp.next = temp.next.next;
-
-                    if (temp.next == null) {
-                        tail = temp;
-                    }
-                    break;
-                }
-                temp = temp.next;
-            }
         }
     }
 

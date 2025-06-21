@@ -1,6 +1,8 @@
-public class SLLMain17
-{
+import java.util.Scanner;
+
+public class SLLMain17 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         SingleLinkedList17 sll = new SingleLinkedList17();
 
         Mahasiswa17 mhs1 = new Mahasiswa17("Alvaro", "24212200", "1A", 4.0);
@@ -18,5 +20,33 @@ public class SLLMain17
         sll.insertAt(2, mhs2);
         sll.print();
 
+        System.out.print("masukan berapa data yang ingin di masukan:");
+        int jumlah = sc.nextInt();
+        sc.nextLine(); // buang newline
+
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("\nData Mahasiswa ke-" + (i + 1));
+            System.out.print("Nama  : ");
+            String nama = sc.nextLine();
+
+            System.out.print("NIM   : ");
+            String nim = sc.nextLine();
+
+            System.out.print("Kelas : ");
+            String kelas = sc.nextLine();
+
+            System.out.print("IPK   : ");
+            String ipkStr = sc.nextLine().replace(",", "."); // Ganti koma ke titik
+            double ipk = Double.parseDouble(ipkStr);
+
+
+            Mahasiswa17 mhsInput = new Mahasiswa17(nama, nim, kelas, ipk);
+            sll.addLast(mhsInput);
+        }
+
+        System.out.println("\n=== hasil setelah di tambahkan ===");
+        sll.print();
+
+        sc.close();
     }
 }

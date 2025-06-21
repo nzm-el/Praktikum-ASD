@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Mahasiswa17 {
     String nim, nama, kelas;
     double ipk;
@@ -9,6 +11,6 @@ public class Mahasiswa17 {
         this.ipk = ipk;
     }
     public void tampilInformasi () {
-        System.out.printf("%-12s %-10s %4s %4.1f\n", nama, nim, kelas, ipk);
+        System.out.printf(Locale.US, "%s\t%s\t%s\t%.1f\n", nama, nim, kelas, ipk);
     }
 }
